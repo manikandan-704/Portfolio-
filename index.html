@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manikandan N - Portfolio</title>
+    <title>Manikandan-Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,12 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">Manikandan N</div>
-            <ul class="nav-menu">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -21,14 +26,23 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- developer Section -->
+    <section id="home" class="developer">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm Manikandan N</h1>
-                <p class="hero-subtitle">B.E. Computer Science Student | Full Stack Developer</p>
-                <p class="hero-description">Passionate about building web applications and solving real-world problems with code</p>
-                <a href="#projects" class="btn btn-primary">View My Work</a>
+            <div class="developer-content">
+                <div class="developer-text">
+                    <h1 class="developer-title">Hi, I'm Manikandan N</h1>
+                    <p class="developer-subtitle">B.E. Computer Science and Design | Full Stack Developer</p>
+                    <p class="developer-description">An undergraduate Computer Science and Design student passionate about creating meaningful web experiences. I value clean design, thoughtful problem-solving, and continuous learning as I grow into a professional developer.</p>
+                    <div class="developer-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="assets/Manikandan_Resume.pdf" download aria-label="Download resume" class="btn btn-secondary">Download Resume</a>
+                    </div>
+                </div>
+                <div class="developer-media">
+                    <!-- Place your profile image at assets/profile.jpg or update the src to your file -->
+                    <img src="assets/profile.jpg" alt="profile picture" class="developer-avatar">
+                </div>
             </div>
         </div>
     </section>
@@ -52,18 +66,20 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Project One</h3>
-                        <span class="project-date">2024</span>
+                        <h3 class="project-title">DutyFix IT</h3>
+                        <span class="project-date">2025</span>
                     </div>
                     <p class="project-description">
-                        Describe your first project here. Explain what it does, the technologies you used, and what you learned from building it. Make it compelling and highlight the impact or functionality.
+                        DutyFix IT is a home service booking web application developed as my final year project using JavaScript, Node.js, Express, and MongoDB. It allows users to book home services easily through a simple and user-friendly interface. I focused on building responsive pages using HTML, CSS, and JavaScript. This project helped me understand how full-stack applications work in real-world scenarios.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
                     </div>
-                    <a href="https://github.com/manikandan-704/your-project-1" target="_blank" class="btn btn-secondary">View on GitHub →</a>
+                    <a href="https://github.com/manikandan-704/Final-Year" target="_blank" class="btn btn-third">View on GitHub →</a>
                 </div>
 
                 <!-- Project 2 -->
@@ -80,7 +96,7 @@
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">JavaScript</span>
                     </div>
-                    <a href="https://github.com/manikandan-704/your-project-2" target="_blank" class="btn btn-secondary">View on GitHub →</a>
+                    <a href="https://github.com/manikandan-704/your-project-2" target="_blank" class="btn btn-third">View on GitHub →</a>
                 </div>
             </div>
         </div>
@@ -92,20 +108,24 @@
             <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <h4>Frontend</h4>
-                    <p>HTML, CSS, JavaScript, Responsive Design</p>
+                    <h4>Programming Languages</h4>
+                    <p>Java, JavaScript, C</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Languages</h4>
-                    <p>JavaScript, Python, C, C++</p>
+                    <h4>Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript (ES6), React, Tailwind CSS, Responsive Web Design, Basic UI/UX Principles, DOM Manipulation</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Backend & Database(Basics)</h4>
+                    <p>Node.js (Basics), Express.js (Basics), MongoDB (Basics), REST API Fundamentals</p>
                 </div>
                 <div class="skill-item">
                     <h4>Tools & Platforms</h4>
-                    <p>Git, GitHub, VS Code, Web Development</p>
+                    <p>Git, GitHub, Visual Studio Code, Browser Developer Tools</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Other Skills</h4>
-                    <p>Problem Solving, Version Control, Web Development</p>
+                    <h4>Development & Professional Skills</h4>
+                    <p>Problem Solving, Version Control, Debugging, Clean Code Practices, Continuous Learning</p>
                 </div>
             </div>
         </div>
@@ -118,8 +138,9 @@
             <p class="contact-description">I'd love to hear from you! Whether you have a question or just want to say hello, feel free to reach out.</p>
             <div class="contact-links">
                 <a href="https://github.com/manikandan-704" target="_blank" class="contact-link">GitHub</a>
-                <a href="mailto:your.email@example.com" class="contact-link">Email</a>
-                <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="mailto:nagarajpriyan2004@gmail.com" class="contact-link">Email</a>
+                <a href="https://www.linkedin.com/in/manikandan704" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="assets/Manikandan_Resume.pdf" download class="contact-link">Download Resume</a>
             </div>
         </div>
     </section>
@@ -127,7 +148,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Manikandan N. All rights reserved.</p>
+            <p>&copy; 2026 Manikandan N. All rights reserved.</p>
         </div>
     </footer>
 
