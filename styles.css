@@ -29,7 +29,7 @@
     --radius-xl: 1rem;
     
     /* Transitions */
-    --transition: all 0.3s ease;
+    --transition: all 0.4s ease;
 }
 
 /* 
@@ -142,6 +142,7 @@ a:hover {
 .hamburger {
     width: 25px;
     height: 3px;
+    font-weight: bold;
     background-color: var(--text-dark);
     border-radius: 2px;
     transition: var(--transition);
@@ -167,7 +168,7 @@ a:hover {
 
 .nav-link {
     color: var(--text-dark);
-    font-weight: 500;
+    font-weight: bold;
     transition: var(--transition);
     padding: var(--spacing-xs) 0;
     border-bottom: 2px solid transparent;
@@ -390,7 +391,8 @@ section {
 .project-card:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
-    border-color: var(--primary-color);
+    border:  2px solid ;
+    border-color:var(--primary-color);
 }
 
 .project-header {
