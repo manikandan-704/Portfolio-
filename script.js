@@ -8,14 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (menuToggle && navMenu) {
     // Toggle menu on button click
-    menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", function (e) {
+      e.stopPropagation();
       menuToggle.classList.toggle("active");
       navMenu.classList.toggle("active");
     });
 
     // Close menu when a link is clicked
     navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", function (e) {
+        // Only close menu, don't prevent default here
         menuToggle.classList.remove("active");
         navMenu.classList.remove("active");
       });
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update active link on scroll
   window.addEventListener("scroll", updateActiveLink);
 
-  // Handle nav link clicks
+  // Handle nav link clicks - smooth scroll only
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -117,23 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
   elementsToObserve.forEach((element) => {
     element.style.opacity = "0";
     observer.observe(element);
-  });
-});
-
-// Mobile Menu (Optional enhancement)
-
-// Add smooth behavior for mobile navigation
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      // Close any mobile menu if it exists
-      const navMenu = document.querySelector(".nav-menu");
-      if (navMenu) {
-        navMenu.style.display = "flex";
-      }
-    });
   });
 });
 
